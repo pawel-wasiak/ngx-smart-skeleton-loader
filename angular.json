@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "ngx-smart-skeleton-loader": {
+      "projectType": "library",
+      "root": "projects/ngx-smart-skeleton-loader",
+      "sourceRoot": "projects/ngx-smart-skeleton-loader/src",
+      "prefix": "ng",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-smart-skeleton-loader/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-smart-skeleton-loader/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-smart-skeleton-loader/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-smart-skeleton-loader/src/test.ts",
+            "tsConfig": "projects/ngx-smart-skeleton-loader/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-smart-skeleton-loader/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "smart-skeleton-loader"

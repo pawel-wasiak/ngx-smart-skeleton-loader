@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-smart-skeleton-loader": [
+        "dist/ngx-smart-skeleton-loader/ngx-smart-skeleton-loader",
+        "dist/ngx-smart-skeleton-loader"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
